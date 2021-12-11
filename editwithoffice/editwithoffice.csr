@@ -1,0 +1,781 @@
+Last login: Sat Dec 11 01:31:26 on ttys000
+simonpeters@Air-von-Simon ~ % ssh  168.119.29.148 
+The authenticity of host '168.119.29.148 (168.119.29.148)' can't be established.
+ED25519 key fingerprint is SHA256:jXG2iay3zCLkymsZIuTIL9N6RKn/MimTf4+ynjRDfTY.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '168.119.29.148' (ED25519) to the list of known hosts.
+simonpeters@168.119.29.148's password: 
+
+simonpeters@Air-von-Simon ~ % ssh  168.119.29.148 -l root
+root@168.119.29.148's password: 
+Permission denied, please try again.
+root@168.119.29.148's password: 
+Linux 29175-48152.pph-server.de 3.10.0-1160.21.1.vz7.174.4 #1 SMP Tue Mar 30 10:41:44 MSK 2021 x86_64
+______                     _     _          _   _           _            
+| ___ \                   (_)   | |        | | | |         | |           
+| |_/ / __ ___ _ __   __ _ _  __| |  ____  | |_| | ___  ___| |_ ___ _ __ 
+|  __/ '__/ _ \ '_ \ / _` | |/ _` | |____| |  _  |/ _ \/ __| __/ _ \ '__|
+| |  | | |  __/ |_) | (_| | | (_| |        | | | | (_) \__ \ ||  __/ |   
+\_|  |_|  \___| .__/ \__,_|_|\__,_|        \_| |_/\___/|___/\__\___|_|   
+              | |                                                          
+              |_|                                                          
+
+Last login: Fri Dec 10 14:31:24 2021 from 87.146.126.230
+root@29175-48152:~# git
+-bash: git: command not found
+root@29175-48152:~# apt-get git
+E: Invalid operation git
+root@29175-48152:~# apt-get install git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libuv1
+Use 'apt autoremove' to remove it.
+The following additional packages will be installed:
+  git-man less liberror-perl patch rsync
+Suggested packages:
+  gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-el git-email
+  git-gui gitk gitweb git-arch git-cvs git-mediawiki git-svn ed diffutils-doc
+The following NEW packages will be installed:
+  git git-man less liberror-perl patch rsync
+0 upgraded, 6 newly installed, 0 to remove and 33 not upgraded.
+Need to get 6264 kB of archives.
+After this operation, 32.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://ftp.de.debian.org/debian stretch/main amd64 liberror-perl all 0.17024-1 [26.9 kB]
+Get:2 http://ftp.de.debian.org/debian stretch/main amd64 git-man all 1:2.11.0-3+deb9u7 [1436 kB]
+Get:3 http://ftp.de.debian.org/debian stretch/main amd64 git amd64 1:2.11.0-3+deb9u7 [4170 kB]
+Get:4 http://ftp.de.debian.org/debian stretch/main amd64 less amd64 481-2.1 [126 kB]
+Get:5 http://ftp.de.debian.org/debian stretch/main amd64 patch amd64 2.7.5-1+deb9u2 [112 kB]
+Get:6 http://ftp.de.debian.org/debian stretch/main amd64 rsync amd64 3.1.2-1+deb9u2 [393 kB]
+Fetched 6264 kB in 0s (13.0 MB/s)
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "de_DE.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Selecting previously unselected package liberror-perl.
+(Reading database ... 39102 files and directories currently installed.)
+Preparing to unpack .../0-liberror-perl_0.17024-1_all.deb ...
+Unpacking liberror-perl (0.17024-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../1-git-man_1%3a2.11.0-3+deb9u7_all.deb ...
+Unpacking git-man (1:2.11.0-3+deb9u7) ...
+Selecting previously unselected package git.
+Preparing to unpack .../2-git_1%3a2.11.0-3+deb9u7_amd64.deb ...
+Unpacking git (1:2.11.0-3+deb9u7) ...
+Selecting previously unselected package less.
+Preparing to unpack .../3-less_481-2.1_amd64.deb ...
+Unpacking less (481-2.1) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../4-patch_2.7.5-1+deb9u2_amd64.deb ...
+Unpacking patch (2.7.5-1+deb9u2) ...
+Selecting previously unselected package rsync.
+Preparing to unpack .../5-rsync_3.1.2-1+deb9u2_amd64.deb ...
+Unpacking rsync (3.1.2-1+deb9u2) ...
+Setting up git-man (1:2.11.0-3+deb9u7) ...
+Setting up less (481-2.1) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Processing triggers for mime-support (3.60) ...
+Setting up liberror-perl (0.17024-1) ...
+Setting up rsync (3.1.2-1+deb9u2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/rsync.service → /lib/systemd/system/rsync.service.
+Setting up patch (2.7.5-1+deb9u2) ...
+Processing triggers for systemd (232-25+deb9u8) ...
+Setting up git (1:2.11.0-3+deb9u7) ...
+root@29175-48152:~# ls
+hello-world.log  recipe3.log
+root@29175-48152:~# cd ..
+root@29175-48152:/# ls
+bin   dev  home  lib64	     media  opt   root	sbin  sys  usr
+boot  etc  lib	 lost+found  mnt    proc  run	srv   tmp  var
+root@29175-48152:/# cd home
+root@29175-48152:/home# ls
+jensbot  minecraft  videobot
+root@29175-48152:/home# mkdir delete
+root@29175-48152:/home# ls
+delete	jensbot  minecraft  videobot
+root@29175-48152:/home# cd delete
+root@29175-48152:/home/delete# git clone https://github.com/burningscript/editfileswithoffice.git
+Cloning into 'editfileswithoffice'...
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 21 (delta 3), reused 17 (delta 2), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+root@29175-48152:/home/delete# ls
+editfileswithoffice
+root@29175-48152:/home/delete# cd editfileswithoffice
+root@29175-48152:/home/delete/editfileswithoffice# ls
+COPYING   README.md  composer.json  img  lib
+Makefile  appinfo    composer.lock  js
+root@29175-48152:/home/delete/editfileswithoffice# make
+-bash: make: command not found
+root@29175-48152:/home/delete/editfileswithoffice# apt-get install make
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libuv1
+Use 'apt autoremove' to remove it.
+Suggested packages:
+  make-doc
+The following NEW packages will be installed:
+  make
+0 upgraded, 1 newly installed, 0 to remove and 33 not upgraded.
+Need to get 302 kB of archives.
+After this operation, 1240 kB of additional disk space will be used.
+Get:1 http://ftp.de.debian.org/debian stretch/main amd64 make amd64 4.1-9.1 [302 kB]
+Fetched 302 kB in 0s (2202 kB/s)
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "de_DE.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Selecting previously unselected package make.
+(Reading database ... 40034 files and directories currently installed.)
+Preparing to unpack .../make_4.1-9.1_amd64.deb ...
+Unpacking make (4.1-9.1) ...
+Setting up make (4.1-9.1) ...
+root@29175-48152:/home/delete/editfileswithoffice# apt-get install which
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package which
+root@29175-48152:/home/delete/editfileswithoffice# apt-get install curl 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+curl is already the newest version (7.52.1-5+deb9u10).
+The following package was automatically installed and is no longer required:
+  libuv1
+Use 'apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 33 not upgraded.
+root@29175-48152:/home/delete/editfileswithoffice# which
+root@29175-48152:/home/delete/editfileswithoffice# bashm
+-bash: bashm: command not found
+root@29175-48152:/home/delete/editfileswithoffice# npm
+npm <command>
+
+Usage:
+
+npm install        install all the dependencies in your project
+npm install <foo>  add the <foo> dependency to your project
+npm test           run this project's tests
+npm run <foo>      run the script named <foo>
+npm <command> -h   quick help on <command>
+npm -l             display usage info for all commands
+npm help <term>    search for help on <term>
+npm help npm       more involved overview
+
+All commands:
+
+    access, adduser, audit, bin, bugs, cache, ci, completion,
+    config, dedupe, deprecate, diff, dist-tag, docs, doctor,
+    edit, exec, explain, explore, find-dupes, fund, get, help,
+    hook, init, install, install-ci-test, install-test, link,
+    ll, login, logout, ls, org, outdated, owner, pack, ping,
+    pkg, prefix, profile, prune, publish, rebuild, repo,
+    restart, root, run-script, search, set, set-script,
+    shrinkwrap, star, stars, start, stop, team, test, token,
+    uninstall, unpublish, unstar, update, version, view, whoami
+
+Specify configs in the ini-formatted file:
+    /root/.npmrc
+or on the command line via: npm <command> --key=value
+
+More configuration info: npm help config
+Configuration fields: npm help 7 config
+
+npm@8.1.4 /usr/local/lib/node_modules/npm
+root@29175-48152:/home/delete/editfileswithoffice# ^C
+root@29175-48152:/home/delete/editfileswithoffice# ls   
+COPYING   README.md  composer.json  img  lib
+Makefile  appinfo    composer.lock  js
+root@29175-48152:/home/delete/editfileswithoffice# make
+make composer
+make[1]: Entering directory '/home/delete/editfileswithoffice'
+No composer command available, downloading a copy from the web
+mkdir -p /home/delete/editfileswithoffice/build/tools
+curl -sS https://getcomposer.org/installer | php
+/bin/sh: 1: php: not found
+curl: (23) Failed writing body (0 != 16366)
+Makefile:73: recipe for target 'composer' failed
+make[1]: *** [composer] Error 127
+make[1]: Leaving directory '/home/delete/editfileswithoffice'
+Makefile:59: recipe for target 'build' failed
+make: *** [build] Error 2
+root@29175-48152:/home/delete/editfileswithoffice# apt-get install composer
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libuv1
+Use 'apt autoremove' to remove it.
+The following additional packages will be installed:
+  jsonlint php-cli php-cli-prompt php-common php-composer-ca-bundle
+  php-composer-semver php-composer-spdx-licenses php-json-schema php-psr-log
+  php-symfony-console php-symfony-filesystem php-symfony-finder
+  php-symfony-polyfill-mbstring php-symfony-process php7.0-cli php7.0-common
+  php7.0-json php7.0-opcache php7.0-readline psmisc
+Suggested packages:
+  fossil mercurial subversion php-zip php-symfony-event-dispatcher
+  php-mbstring php-pear
+The following NEW packages will be installed:
+  composer jsonlint php-cli php-cli-prompt php-common php-composer-ca-bundle
+  php-composer-semver php-composer-spdx-licenses php-json-schema php-psr-log
+  php-symfony-console php-symfony-filesystem php-symfony-finder
+  php-symfony-polyfill-mbstring php-symfony-process php7.0-cli php7.0-common
+  php7.0-json php7.0-opcache php7.0-readline psmisc
+0 upgraded, 21 newly installed, 0 to remove and 33 not upgraded.
+Need to get 2975 kB of archives.
+After this operation, 13.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://ftp.de.debian.org/debian stretch/main amd64 psmisc amd64 22.21-2.1+b2 [123 kB]
+Get:2 http://ftp.de.debian.org/debian stretch/main amd64 php-common all 1:49 [14.1 kB]
+Get:3 http://ftp.de.debian.org/debian stretch/main amd64 php-symfony-polyfill-mbstring all 1.2.0-1 [12.0 kB]
+Get:4 http://ftp.de.debian.org/debian stretch/main amd64 php-symfony-console all 2.8.7+dfsg-1.3+deb9u3 [70.8 kB]
+Get:5 http://ftp.de.debian.org/debian stretch/main amd64 php-symfony-filesystem all 2.8.7+dfsg-1.3+deb9u3 [22.7 kB]
+Get:6 http://ftp.de.debian.org/debian stretch/main amd64 php-symfony-finder all 2.8.7+dfsg-1.3+deb9u3 [35.0 kB]
+Get:7 http://ftp.de.debian.org/debian stretch/main amd64 php-symfony-process all 2.8.7+dfsg-1.3+deb9u3 [31.5 kB]
+Get:8 http://ftp.de.debian.org/debian stretch/main amd64 php7.0-common amd64 7.0.33-0+deb9u8 [886 kB]
+Get:9 http://ftp.de.debian.org/debian stretch/main amd64 php7.0-json amd64 7.0.33-0+deb9u8 [17.0 kB]
+Get:10 http://ftp.de.debian.org/debian stretch/main amd64 php7.0-opcache amd64 7.0.33-0+deb9u8 [77.6 kB]
+Get:11 http://ftp.de.debian.org/debian stretch/main amd64 php7.0-readline amd64 7.0.33-0+deb9u8 [12.2 kB]
+Get:12 http://ftp.de.debian.org/debian stretch/main amd64 php7.0-cli amd64 7.0.33-0+deb9u8 [1284 kB]
+Get:13 http://ftp.de.debian.org/debian stretch/main amd64 php-cli all 1:7.0+49 [5098 B]
+Get:14 http://ftp.de.debian.org/debian stretch/main amd64 php-json-schema all 1.6.1-2 [23.1 kB]
+Get:15 http://ftp.de.debian.org/debian stretch/main amd64 php-composer-ca-bundle all 1.0.2-1 [13.2 kB]
+Get:16 http://ftp.de.debian.org/debian stretch/main amd64 php-composer-semver all 1.4.2-1 [11.7 kB]
+Get:17 http://ftp.de.debian.org/debian stretch/main amd64 php-composer-spdx-licenses all 1.1.5-1 [10.0 kB]
+Get:18 http://ftp.de.debian.org/debian stretch/main amd64 jsonlint all 1.5.0-1 [11.2 kB]
+Get:19 http://ftp.de.debian.org/debian stretch/main amd64 php-cli-prompt all 1.0.2+dfsg-1 [4464 B]
+Get:20 http://ftp.de.debian.org/debian stretch/main amd64 php-psr-log all 1.0.0-4 [6614 B]
+Get:21 http://ftp.de.debian.org/debian stretch/main amd64 composer all 1.2.2-1 [304 kB]
+Fetched 2975 kB in 0s (10.2 MB/s)
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "de_DE.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+Selecting previously unselected package psmisc.
+(Reading database ... 40075 files and directories currently installed.)
+Preparing to unpack .../00-psmisc_22.21-2.1+b2_amd64.deb ...
+Unpacking psmisc (22.21-2.1+b2) ...
+Selecting previously unselected package php-common.
+Preparing to unpack .../01-php-common_1%3a49_all.deb ...
+Unpacking php-common (1:49) ...
+Selecting previously unselected package php-symfony-polyfill-mbstring.
+Preparing to unpack .../02-php-symfony-polyfill-mbstring_1.2.0-1_all.deb ...
+Unpacking php-symfony-polyfill-mbstring (1.2.0-1) ...
+Selecting previously unselected package php-symfony-console.
+Preparing to unpack .../03-php-symfony-console_2.8.7+dfsg-1.3+deb9u3_all.deb ...
+Unpacking php-symfony-console (2.8.7+dfsg-1.3+deb9u3) ...
+Selecting previously unselected package php-symfony-filesystem.
+Preparing to unpack .../04-php-symfony-filesystem_2.8.7+dfsg-1.3+deb9u3_all.deb ...
+Unpacking php-symfony-filesystem (2.8.7+dfsg-1.3+deb9u3) ...
+Selecting previously unselected package php-symfony-finder.
+Preparing to unpack .../05-php-symfony-finder_2.8.7+dfsg-1.3+deb9u3_all.deb ...
+Unpacking php-symfony-finder (2.8.7+dfsg-1.3+deb9u3) ...
+Selecting previously unselected package php-symfony-process.
+Preparing to unpack .../06-php-symfony-process_2.8.7+dfsg-1.3+deb9u3_all.deb ...
+Unpacking php-symfony-process (2.8.7+dfsg-1.3+deb9u3) ...
+Selecting previously unselected package php7.0-common.
+Preparing to unpack .../07-php7.0-common_7.0.33-0+deb9u8_amd64.deb ...
+Unpacking php7.0-common (7.0.33-0+deb9u8) ...
+Selecting previously unselected package php7.0-json.
+Preparing to unpack .../08-php7.0-json_7.0.33-0+deb9u8_amd64.deb ...
+Unpacking php7.0-json (7.0.33-0+deb9u8) ...
+Selecting previously unselected package php7.0-opcache.
+Preparing to unpack .../09-php7.0-opcache_7.0.33-0+deb9u8_amd64.deb ...
+Unpacking php7.0-opcache (7.0.33-0+deb9u8) ...
+Selecting previously unselected package php7.0-readline.
+Preparing to unpack .../10-php7.0-readline_7.0.33-0+deb9u8_amd64.deb ...
+Unpacking php7.0-readline (7.0.33-0+deb9u8) ...
+Selecting previously unselected package php7.0-cli.
+Preparing to unpack .../11-php7.0-cli_7.0.33-0+deb9u8_amd64.deb ...
+Unpacking php7.0-cli (7.0.33-0+deb9u8) ...
+Selecting previously unselected package php-cli.
+Preparing to unpack .../12-php-cli_1%3a7.0+49_all.deb ...
+Unpacking php-cli (1:7.0+49) ...
+Selecting previously unselected package php-json-schema.
+Preparing to unpack .../13-php-json-schema_1.6.1-2_all.deb ...
+Unpacking php-json-schema (1.6.1-2) ...
+Selecting previously unselected package php-composer-ca-bundle.
+Preparing to unpack .../14-php-composer-ca-bundle_1.0.2-1_all.deb ...
+Unpacking php-composer-ca-bundle (1.0.2-1) ...
+Selecting previously unselected package php-composer-semver.
+Preparing to unpack .../15-php-composer-semver_1.4.2-1_all.deb ...
+Unpacking php-composer-semver (1.4.2-1) ...
+Selecting previously unselected package php-composer-spdx-licenses.
+Preparing to unpack .../16-php-composer-spdx-licenses_1.1.5-1_all.deb ...
+Unpacking php-composer-spdx-licenses (1.1.5-1) ...
+Selecting previously unselected package jsonlint.
+Preparing to unpack .../17-jsonlint_1.5.0-1_all.deb ...
+Unpacking jsonlint (1.5.0-1) ...
+Selecting previously unselected package php-cli-prompt.
+Preparing to unpack .../18-php-cli-prompt_1.0.2+dfsg-1_all.deb ...
+Unpacking php-cli-prompt (1.0.2+dfsg-1) ...
+Selecting previously unselected package php-psr-log.
+Preparing to unpack .../19-php-psr-log_1.0.0-4_all.deb ...
+Unpacking php-psr-log (1.0.0-4) ...
+Selecting previously unselected package composer.
+Preparing to unpack .../20-composer_1.2.2-1_all.deb ...
+Unpacking composer (1.2.2-1) ...
+Setting up psmisc (22.21-2.1+b2) ...
+Setting up php-common (1:49) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+Setting up php-composer-spdx-licenses (1.1.5-1) ...
+Setting up php-symfony-filesystem (2.8.7+dfsg-1.3+deb9u3) ...
+Setting up php7.0-common (7.0.33-0+deb9u8) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/calendar.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/ctype.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/exif.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/fileinfo.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/ftp.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/gettext.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/iconv.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/pdo.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/phar.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/posix.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/shmop.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/sockets.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/sysvmsg.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/sysvsem.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/sysvshm.ini with new version
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/tokenizer.ini with new version
+Setting up php-symfony-polyfill-mbstring (1.2.0-1) ...
+Setting up php-symfony-process (2.8.7+dfsg-1.3+deb9u3) ...
+Setting up php-psr-log (1.0.0-4) ...
+Setting up php-symfony-finder (2.8.7+dfsg-1.3+deb9u3) ...
+Setting up php7.0-readline (7.0.33-0+deb9u8) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/readline.ini with new version
+Setting up php7.0-opcache (7.0.33-0+deb9u8) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/opcache.ini with new version
+Setting up php-composer-ca-bundle (1.0.2-1) ...
+Setting up php-composer-semver (1.4.2-1) ...
+Setting up php-cli-prompt (1.0.2+dfsg-1) ...
+Setting up php7.0-json (7.0.33-0+deb9u8) ...
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/mods-available/json.ini with new version
+Setting up php-symfony-console (2.8.7+dfsg-1.3+deb9u3) ...
+Setting up php7.0-cli (7.0.33-0+deb9u8) ...
+update-alternatives: using /usr/bin/php7.0 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar7.0 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar7.0 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+Creating config file /etc/php/7.0/cli/php.ini with new version
+Setting up php-cli (1:7.0+49) ...
+Setting up jsonlint (1.5.0-1) ...
+Setting up php-json-schema (1.6.1-2) ...
+Setting up composer (1.2.2-1) ...
+root@29175-48152:/home/delete/editfileswithoffice# ls
+COPYING   README.md  build	    composer.lock  js
+Makefile  appinfo    composer.json  img		   lib
+root@29175-48152:/home/delete/editfileswithoffice# make
+make composer
+make[1]: Entering directory '/home/delete/editfileswithoffice'
+composer install --prefer-dist
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+make[1]: Leaving directory '/home/delete/editfileswithoffice'
+root@29175-48152:/home/delete/editfileswithoffice# ls
+COPYING   README.md  build	    composer.lock  js	vendor
+Makefile  appinfo    composer.json  img		   lib
+root@29175-48152:/home/delete/editfileswithoffice# make && make appstore
+make composer
+make[1]: Entering directory '/home/delete/editfileswithoffice'
+composer install --prefer-dist
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+make[1]: Leaving directory '/home/delete/editfileswithoffice'
+rm -rf /home/delete/editfileswithoffice/build/artifacts/appstore
+mkdir -p /home/delete/editfileswithoffice/build/artifacts/appstore
+tar cvzf /home/delete/editfileswithoffice/build/artifacts/appstore/editfileswithoffice.tar.gz \
+--exclude-vcs \
+--exclude="../editfileswithoffice/build" \
+--exclude="../editfileswithoffice/tests" \
+--exclude="../editfileswithoffice/Makefile" \
+--exclude="../editfileswithoffice/*.log" \
+--exclude="../editfileswithoffice/phpunit*xml" \
+--exclude="../editfileswithoffice/composer.*" \
+--exclude="../editfileswithoffice/js/node_modules" \
+--exclude="../editfileswithoffice/js/tests" \
+--exclude="../editfileswithoffice/js/test" \
+--exclude="../editfileswithoffice/js/*.log" \
+--exclude="../editfileswithoffice/js/package.json" \
+--exclude="../editfileswithoffice/js/bower.json" \
+--exclude="../editfileswithoffice/js/karma.*" \
+--exclude="../editfileswithoffice/js/protractor.*" \
+--exclude="../editfileswithoffice/package.json" \
+--exclude="../editfileswithoffice/bower.json" \
+--exclude="../editfileswithoffice/karma.*" \
+--exclude="../editfileswithoffice/protractor\.*" \
+--exclude="../editfileswithoffice/.*" \
+--exclude="../editfileswithoffice/js/.*" \
+../editfileswithoffice
+tar: Removing leading `../' from member names
+../editfileswithoffice/
+../editfileswithoffice/README.md
+../editfileswithoffice/COPYING
+../editfileswithoffice/js/
+../editfileswithoffice/js/script.js
+../editfileswithoffice/lib/
+../editfileswithoffice/lib/AppInfo/
+../editfileswithoffice/lib/AppInfo/Application.php
+../editfileswithoffice/img/
+../editfileswithoffice/img/app.svg
+../editfileswithoffice/vendor/
+../editfileswithoffice/vendor/composer/
+../editfileswithoffice/vendor/composer/autoload_namespaces.php
+../editfileswithoffice/vendor/composer/installed.json
+../editfileswithoffice/vendor/composer/autoload_classmap.php
+../editfileswithoffice/vendor/composer/ClassLoader.php
+../editfileswithoffice/vendor/composer/autoload_real.php
+../editfileswithoffice/vendor/composer/LICENSE
+../editfileswithoffice/vendor/composer/autoload_static.php
+../editfileswithoffice/vendor/composer/autoload_psr4.php
+../editfileswithoffice/vendor/autoload.php
+../editfileswithoffice/appinfo/
+../editfileswithoffice/appinfo/info.xml
+root@29175-48152:/home/delete/editfileswithoffice# ls
+COPYING   README.md  build	    composer.lock  js	vendor
+Makefile  appinfo    composer.json  img		   lib
+root@29175-48152:/home/delete/editfileswithoffice# cd appstore
+-bash: cd: appstore: No such file or directory
+root@29175-48152:/home/delete/editfileswithoffice# ls
+COPYING   README.md  build	    composer.lock  js	vendor
+Makefile  appinfo    composer.json  img		   lib
+root@29175-48152:/home/delete/editfileswithoffice# cd 
+root@29175-48152:~# cd ..
+root@29175-48152:/# ls
+bin   dev  home  lib64	     media  opt   root	sbin  sys  usr
+boot  etc  lib	 lost+found  mnt    proc  run	srv   tmp  var
+root@29175-48152:/# cd home
+root@29175-48152:/home# ls
+delete	jensbot  minecraft  videobot
+root@29175-48152:/home# cd delete
+root@29175-48152:/home/delete# ls
+editfileswithoffice
+root@29175-48152:/home/delete# cd editfileswithoffice/
+root@29175-48152:/home/delete/editfileswithoffice# ls
+COPYING   README.md  build	    composer.lock  js	vendor
+Makefile  appinfo    composer.json  img		   lib
+root@29175-48152:/home/delete/editfileswithoffice# make && make appstore
+make composer
+make[1]: Entering directory '/home/delete/editfileswithoffice'
+composer install --prefer-dist
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+make[1]: Leaving directory '/home/delete/editfileswithoffice'
+rm -rf /home/delete/editfileswithoffice/build/artifacts/appstore
+mkdir -p /home/delete/editfileswithoffice/build/artifacts/appstore
+tar cvzf /home/delete/editfileswithoffice/build/artifacts/appstore/editfileswithoffice.tar.gz \
+--exclude-vcs \
+--exclude="../editfileswithoffice/build" \
+--exclude="../editfileswithoffice/tests" \
+--exclude="../editfileswithoffice/Makefile" \
+--exclude="../editfileswithoffice/*.log" \
+--exclude="../editfileswithoffice/phpunit*xml" \
+--exclude="../editfileswithoffice/composer.*" \
+--exclude="../editfileswithoffice/js/node_modules" \
+--exclude="../editfileswithoffice/js/tests" \
+--exclude="../editfileswithoffice/js/test" \
+--exclude="../editfileswithoffice/js/*.log" \
+--exclude="../editfileswithoffice/js/package.json" \
+--exclude="../editfileswithoffice/js/bower.json" \
+--exclude="../editfileswithoffice/js/karma.*" \
+--exclude="../editfileswithoffice/js/protractor.*" \
+--exclude="../editfileswithoffice/package.json" \
+--exclude="../editfileswithoffice/bower.json" \
+--exclude="../editfileswithoffice/karma.*" \
+--exclude="../editfileswithoffice/protractor\.*" \
+--exclude="../editfileswithoffice/.*" \
+--exclude="../editfileswithoffice/js/.*" \
+../editfileswithoffice
+tar: Removing leading `../' from member names
+../editfileswithoffice/
+../editfileswithoffice/README.md
+../editfileswithoffice/COPYING
+../editfileswithoffice/js/
+../editfileswithoffice/js/script.js
+../editfileswithoffice/lib/
+../editfileswithoffice/lib/AppInfo/
+../editfileswithoffice/lib/AppInfo/Application.php
+../editfileswithoffice/img/
+../editfileswithoffice/img/app.svg
+../editfileswithoffice/vendor/
+../editfileswithoffice/vendor/composer/
+../editfileswithoffice/vendor/composer/autoload_namespaces.php
+../editfileswithoffice/vendor/composer/installed.json
+../editfileswithoffice/vendor/composer/autoload_classmap.php
+../editfileswithoffice/vendor/composer/ClassLoader.php
+../editfileswithoffice/vendor/composer/autoload_real.php
+../editfileswithoffice/vendor/composer/LICENSE
+../editfileswithoffice/vendor/composer/autoload_static.php
+../editfileswithoffice/vendor/composer/autoload_psr4.php
+../editfileswithoffice/vendor/autoload.php
+../editfileswithoffice/appinfo/
+../editfileswithoffice/appinfo/info.xml
+root@29175-48152:/home/delete/editfileswithoffice# ls
+COPYING   README.md  build	    composer.lock  js	vendor
+Makefile  appinfo    composer.json  img		   lib
+root@29175-48152:/home/delete/editfileswithoffice# cd vendor
+root@29175-48152:/home/delete/editfileswithoffice/vendor# ls
+autoload.php  composer
+root@29175-48152:/home/delete/editfileswithoffice/vendor# cd ..
+root@29175-48152:/home/delete/editfileswithoffice# cd ..
+root@29175-48152:/home/delete# git clone https://github.com/burningscript/editfileswithoffice.git
+fatal: destination path 'editfileswithoffice' already exists and is not an empty directory.
+root@29175-48152:/home/delete# rm -d editfileswithoffice/
+rm: cannot remove 'editfileswithoffice/': Directory not empty
+root@29175-48152:/home/delete# rm -r editfileswithoffice/
+root@29175-48152:/home/delete# ls
+root@29175-48152:/home/delete# git clone https://github.com/burningscript/editfileswithoffice.git
+Cloning into 'editfileswithoffice'...
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 21 (delta 3), reused 17 (delta 2), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+root@29175-48152:/home/delete# ls editfileswithoffice/
+COPYING   README.md  composer.json  img  lib
+Makefile  appinfo    composer.lock  js
+root@29175-48152:/home/delete# make && make appstore
+make: *** No targets specified and no makefile found.  Stop.
+root@29175-48152:/home/delete# cd editfileswithoffice/
+root@29175-48152:/home/delete/editfileswithoffice# make && make appstore
+make composer
+make[1]: Entering directory '/home/delete/editfileswithoffice'
+composer install --prefer-dist
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+make[1]: Leaving directory '/home/delete/editfileswithoffice'
+rm -rf /home/delete/editfileswithoffice/build/artifacts/appstore
+mkdir -p /home/delete/editfileswithoffice/build/artifacts/appstore
+tar cvzf /home/delete/editfileswithoffice/build/artifacts/appstore/editfileswithoffice.tar.gz \
+--exclude-vcs \
+--exclude="../editfileswithoffice/build" \
+--exclude="../editfileswithoffice/tests" \
+--exclude="../editfileswithoffice/Makefile" \
+--exclude="../editfileswithoffice/*.log" \
+--exclude="../editfileswithoffice/phpunit*xml" \
+--exclude="../editfileswithoffice/composer.*" \
+--exclude="../editfileswithoffice/js/node_modules" \
+--exclude="../editfileswithoffice/js/tests" \
+--exclude="../editfileswithoffice/js/test" \
+--exclude="../editfileswithoffice/js/*.log" \
+--exclude="../editfileswithoffice/js/package.json" \
+--exclude="../editfileswithoffice/js/bower.json" \
+--exclude="../editfileswithoffice/js/karma.*" \
+--exclude="../editfileswithoffice/js/protractor.*" \
+--exclude="../editfileswithoffice/package.json" \
+--exclude="../editfileswithoffice/bower.json" \
+--exclude="../editfileswithoffice/karma.*" \
+--exclude="../editfileswithoffice/protractor\.*" \
+--exclude="../editfileswithoffice/.*" \
+--exclude="../editfileswithoffice/js/.*" \
+../editfileswithoffice
+tar: Removing leading `../' from member names
+../editfileswithoffice/
+../editfileswithoffice/README.md
+../editfileswithoffice/COPYING
+../editfileswithoffice/js/
+../editfileswithoffice/js/script.js
+../editfileswithoffice/lib/
+../editfileswithoffice/lib/AppInfo/
+../editfileswithoffice/lib/AppInfo/Application.php
+../editfileswithoffice/img/
+../editfileswithoffice/img/app.svg
+../editfileswithoffice/vendor/
+../editfileswithoffice/vendor/composer/
+../editfileswithoffice/vendor/composer/autoload_namespaces.php
+../editfileswithoffice/vendor/composer/installed.json
+../editfileswithoffice/vendor/composer/autoload_classmap.php
+../editfileswithoffice/vendor/composer/ClassLoader.php
+../editfileswithoffice/vendor/composer/autoload_real.php
+../editfileswithoffice/vendor/composer/LICENSE
+../editfileswithoffice/vendor/composer/autoload_static.php
+../editfileswithoffice/vendor/composer/autoload_psr4.php
+../editfileswithoffice/vendor/autoload.php
+../editfileswithoffice/appinfo/
+../editfileswithoffice/appinfo/info.xml
+root@29175-48152:/home/delete/editfileswithoffice# ls
+COPYING   README.md  build	    composer.lock  js	vendor
+Makefile  appinfo    composer.json  img		   lib
+root@29175-48152:/home/delete/editfileswithoffice# 
+root@29175-48152:/home/delete/editfileswithoffice# ls
+COPYING   README.md  build	    composer.lock  js	vendor
+Makefile  appinfo    composer.json  img		   lib
+root@29175-48152:/home/delete/editfileswithoffice# cd build
+root@29175-48152:/home/delete/editfileswithoffice/build# ls
+artifacts
+root@29175-48152:/home/delete/editfileswithoffice/build# cd artifacts
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts# ls
+appstore
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts# cd appstore
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts/appstore# ls
+editfileswithoffice.tar.gz
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts/appstore# cd ..
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts# cd ..
+root@29175-48152:/home/delete/editfileswithoffice/build# cd artifacts/
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts# ls
+appstore
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts# cd appstore
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts/appstore# openssl
+OpenSSL> ^C
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts/appstore# ls
+editfileswithoffice.tar.gz
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts/appstore# openssl dgst -sha512 -sign ~/.nextcloud/certificates/APP_ID.key editfileswithoffice.tar.gz | openssl base64
+Can't open /root/.nextcloud/certificates/APP_ID.key for reading, No such file or directory
+140162837950528:error:02001002:system library:fopen:No such file or directory:../crypto/bio/bss_file.c:74:fopen('/root/.nextcloud/certificates/APP_ID.key','r')
+140162837950528:error:2006D080:BIO routines:BIO_new_file:no such file:../crypto/bio/bss_file.c:81:
+unable to load key file
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts/appstore# mkdir -p ~/.nextcloud/certificates/
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts/appstore# mkdir -p ~/.nextcloud/certificates/
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts/appstore# openssl dgst -sha512 -sign ~/.nextcloud/certificates/APP_ID.key editfileswithoffice.tar.gz | openssl base64
+Can't open /root/.nextcloud/certificates/APP_ID.key for reading, No such file or directory
+140090065334336:error:02001002:system library:fopen:No such file or directory:../crypto/bio/bss_file.c:74:fopen('/root/.nextcloud/certificates/APP_ID.key','r')
+140090065334336:error:2006D080:BIO routines:BIO_new_file:no such file:../crypto/bio/bss_file.c:81:
+unable to load key file
+root@29175-48152:/home/delete/editfileswithoffice/build/artifacts/appstore# cd ~/.nextcloud/certificates/
+root@29175-48152:~/.nextcloud/certificates# ls
+root@29175-48152:~/.nextcloud/certificates# openssl req -nodes -newkey rsa:4096 -keyout editfileswithoffice.key -out editfileswithoffice.csr -subj "/CN=editfileswithoffice"
+Generating a RSA private key
+.................................................................++++
+...........................++++
+writing new private key to 'editfileswithoffice.key'
+-----
+root@29175-48152:~/.nextcloud/certificates# ls
+editfileswithoffice.csr  editfileswithoffice.key
+root@29175-48152:~/.nextcloud/certificates# cd editfileswithoffice.csr
+-bash: cd: editfileswithoffice.csr: Not a directory
+root@29175-48152:~/.nextcloud/certificates# nano editfileswithoffice.csr
+
+  GNU nano 2.7.4            File: editfileswithoffice.csr                       
+
+sCF32wjRooKSe57tZhrD4U22zTUa3HPtmPc/SduspmdRCp52zRDOHZatg++woofi
+GszqNyfG3eIjPb3FtJ4g91rBTqLkNTfBgR+yemxSoIyiGztaTympdrLGkCwir/Ka
+9nmu7rP/TBUPs5Bt0duCHJ7eYHZyW2ueHaY+dIT60y9DFqoywLLvoSqlBrlVM9qC
+w8Z26QUTK+PZM3N/AgMBAAGgADANBgkqhkiG9w0BAQsFAAOCAgEAZEZ8Q4c4kPTI
+oUCWrhWYh+mpWxUSQhzdVSySzfkD3k3MnEGSz4e3DAnIaArhuXm4yscmOi2uICXt
+62OFprEJf2X8fuwLnfXWhY5xKgSemXNWWccL/8SnzM1NsOqsYh9VOx4TIEIbKw7w
+kzO8I+XEkVcMiVNhhX5GoJH9NaaZd114M0zVMdvtHMQ1spFHPhZj6MceUIIEX5uN
+DaOld40647Ba68tJrUG3iJDFol9VqAY+uOkfghDrBweSqiu99Pik67v3T/8UuVE0
+gqVfiOgzPgi7smuAX62rw9Eo2tmN1QPWFZ4C/U0xzOyF0Vn3z92hplb98GgrS17d
+PuD5nsLnT/qtm3YbTQeHBm9Mo3CNfYUKur0X1kMK6Hg0ijtescUkl0KgHCNkg41M
+fz/2byfoLtK0TjsMjJpVoqG74qcQ29E8ZWwgmmNwrufRbfeJHVKnf6U1bO/Qq7EX
+wYll6BLTC6jbzgQyGBSZWk9iiUoRZC/7aMNYRIjyGX7vUOMKRIz701Sx/HS86AQP
+cgE8n7DWEvZGLQ5+f0mWhE1rEY9A3o6BaqxAIw/WzfPl8WmsY3T07NEcPBEPXbh1
+8QwYhB9wbi+rHez0xf4CnjfmJpGXgs5cg5o0USCiFBYEP3rt82LRLLcz0vKTHMdW
+0hmG1z/9dZe3happ/R4NeWMPhzXmnww=
+-----END CERTIFICATE REQUEST-----
